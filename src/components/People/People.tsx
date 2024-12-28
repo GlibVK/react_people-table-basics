@@ -23,7 +23,7 @@ export const People = () => {
   useEffect(() => {
     setLoading(true);
 
-    const fetchPoeple = async () => {
+    const fetchPeople = async () => {
       try {
         const peopleFormServer = await getPeople();
 
@@ -35,7 +35,7 @@ export const People = () => {
       }
     };
 
-    fetchPoeple();
+    fetchPeople ();
   }, []);
 
   useEffect(() => {
@@ -116,7 +116,7 @@ export const People = () => {
                           to={`../${getPersonLink(person.mother.name, person.mother.born)}`}
                           className="has-text-danger"
                         >
-                          {person.motherName}
+                          {person.mother.name}
                         </NavLink>
                       </td>
                     ) : (
@@ -128,7 +128,7 @@ export const People = () => {
                         <NavLink
                           to={`../${getPersonLink(person.father.name, person.father.born)}`}
                         >
-                          {person.fatherName}
+                          {person.father.name}
                         </NavLink>
                       </td>
                     ) : (

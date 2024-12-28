@@ -3,7 +3,7 @@ import { Navbar } from './components/Navbar/Navbar';
 import { Outlet } from 'react-router-dom';
 
 export const App = () => (
-  <html className="has-navbar-fixed-top">
+  <div className="has-navbar-fixed-top">
     <div data-cy="app">
       <Navbar />
 
@@ -13,5 +13,5 @@ export const App = () => (
         </div>
       </main>
     </div>
-  </html>
+  </div>
 );
